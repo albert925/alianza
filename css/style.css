@@ -1,0 +1,67 @@
+	figure img{
+		width: 100%;
+	}
+header{
+	display: flex;
+	justify-content: space-around;
+}
+	header #logo{
+		width: 18%;
+	}
+	header #mnP{
+		width: 60%;
+	}
+	header #usuario{
+		width: 8%;
+	}
+#mnP{
+	align-items: center;
+	border:1px solid #000;
+	display: flex;
+}
+	#mnP a{
+		border-right:1px solid #5B3A11;
+		color: #004B9C;
+		font-size: 18px;
+		padding: 0.5em;
+		text-decoration: none;
+	}
+	#mnP a:hover,#mnP a:active{
+		background: rgba(0,0,0,0.5);
+	}
+	#mnP ul{
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		z-index: 35;
+	}
+		#mnP ul li{
+			padding: 0.5em 0;
+			margin: 0;
+		}
+			#mnP ul li ul{
+				background:rgba(56,31,8,0.7);
+				display: none;
+				-webkit--ms-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				position: absolute;
+				text-align: center;
+			}
+				#mnP ul li ul li{
+					border-bottom: 1px solid rgba(0,0,0,0.7);
+					padding: 0.5em 0;
+				}
+				#mnP ul li ul a{
+					border:0;
+					font-weight: normal;
+					padding: 0.5em 1em;
+				}
+		#mnP ul li:hover>ul{
+			display: flex;
+		}
+	#mnP .sull{
+		background: rgba(0,0,0,0.5);
+		color: #A07940;
+	}
