@@ -1,3 +1,69 @@
+#mindv,#minln{
+  background: #E88A02;
+  height: 0.25em;
+  width: 3em;
+}
+.fondcontx{
+  background-size: cover;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+  .fondcontx article{
+    padding: 10em 0;
+    width: 40%;
+  }
+    .fondcontx article a{
+      background: #E88A02;
+      border-radius: 3px;
+      color: #fff;
+      padding: 0.5em 1em;
+      text-decoration: none;
+    }
+    .fondcontx article a:hover,.fondcontx article a:active{
+      background: #CC790B;
+    }
+    .fondcontx article hgroup{
+      color: #fff;
+      text-shadow: 0 0 3px #000;
+    }
+      .fondcontx article hgroup h2{
+        font-size: 42px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .fondcontx article hgroup h3{
+        font-size: 25px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    .fondcontx article p{
+      text-shadow: 0 0 3px rgba(255,255,255,0.9);
+    }
+.planflx{
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-justify-content: space-between;
+  -wkit-justify-content: space-between;
+  justify-content: space-between;
+}
+  .planflx figure{
+    width: 30%;
+  }
+    .planflx figure figcaption{
+      padding: 0 0 1em 0;
+    }
+    .planflx h3{
+      text-transform: uppercase;
+    }
+    .planflx p{color: #8E8E8E;}
+    .planflx h3,.planflx p{
+      margin: 0;
+    }
 /* Divider Styles */
 .code-wrapper {
   border-radius: 8px;
@@ -56,3 +122,29 @@
     -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
   }
+/*---------------------------------------------------*/
+@media screen and (max-width: 700px){
+  .fondcontx{
+    justify-content: initial;
+  }
+    .fondcontx article{
+      margin: 0 auto;
+      width: 90%;
+    }
+      .fondcontx article hgroup h2{
+        font-size: 32px;
+      }
+      .fondcontx article hgroup h3{
+        font-size: 18px;
+      }
+    .planflx figure{
+      margin: 1em 1em;
+      width: 40%;
+    }
+}
+@media screen and (max-width: 500px){
+  .planflx figure{
+    margin: 1em auto;
+    width: 90%;
+  }
+}

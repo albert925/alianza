@@ -1,8 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700,800);/*font-family: 'Dosis', sans-serif;*/
+body{
+	font-family: 'Dosis', sans-serif;
+	font-size: 16px;
+}
 	figure img{
 		width: 100%;
 	}
+footer{
+	background: #EA8D0A;
+	color: #fff;
+}
+	footer a{
+		text-decoration: none;
+	}
+	footer h2{
+		color: #7C4A03;
+		margin-top: 0;
+	}
+	footer .footfin{
+		background: #C47300;
+		font-size: 12px;
+		padding: 1em 0;
+		text-align: center;
+	}
+		footer .footfin a{color: #fff;}
+	footer .foorflx{
+		display: flex;
+		-webkit-justify-content: space-around;
+		-ms-justify-content: space-around;
+		justify-content: space-around;
+		padding: 3em 0;
+	}
+		footer .foorflx #redes{
+			display: flex;
+			-webkit-justify-content: space-around;
+			-ms-justify-content: space-around;
+			justify-content: space-around;
+			font-size: 50px;
+		}
+			footer .foorflx #redes a{color: #7E4A01;}
+			footer .foorflx #redes a:hover,footer .foorflx #redes a:active{transform: scale(1.1);}
+		footer .foorflx .ar{
+			width: 20%;
+		}
+			footer .foorflx .arr2 h2{
+				font-size: 30px;
+			}
+		footer .foorflx .arlk{
+			display: flex;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+			footer .foorflx .arlk a{
+				color: #fff;
+				margin: 0.25em 0;
+			}
+			footer .foorflx .arlk a:hover,footer .foorflx .arlk a:active,footer .footfin a:hover{
+				text-decoration: underline;
+			}
 header{
 	display: flex;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
 	justify-content: space-around;
 }
 	header #logo{
@@ -12,22 +72,60 @@ header{
 		width: 60%;
 	}
 	header #usuario{
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		color: #E88A02;
+		display: flex;
+		font-size: 30px;
 		width: 8%;
 	}
-#mnP{
-	align-items: center;
-	border:1px solid #000;
-	display: flex;
+		header #usuario span{
+			cursor: pointer;
+			transform: scale(1.5);
+		}
+		header #usuario span:hover,header #usuario span:active{
+			transform: scale(1.6);
+		}
+#automargen{
+	margin: 0 auto;
+	max-width: 1200px;
 }
-	#mnP a{
-		border-right:1px solid #5B3A11;
+#hdos{
+	border-bottom: 4px solid #E88A02;
+	color: #3D3D3D;
+	font-size: 30px;
+	text-align: center;
+	margin: 1em auto;
+	padding-bottom: 0.5em;
+	width: 70%;
+}
+#mn_mv{
+	color: #004B9C;
+	cursor: pointer;
+	display: none;
+	font-size: 50px;
+}
+#mn_mv:hover,#mn_mv:active{
+	transform: scale(1.2);
+}
+#mnP{
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	display: flex;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+	#mnP a{	
 		color: #004B9C;
+		padding: 1.5em 0.5em;
 		font-size: 18px;
-		padding: 0.5em;
 		text-decoration: none;
 	}
 	#mnP a:hover,#mnP a:active{
-		background: rgba(0,0,0,0.5);
+		background: #E88A02;
+		color: #fff;
 	}
 	#mnP ul{
 		display: flex;
@@ -65,3 +163,90 @@ header{
 		background: rgba(0,0,0,0.5);
 		color: #A07940;
 	}
+.mapas{
+	height: 14em;
+}
+@media screen and (max-width: 1260px){
+		header #mnP{
+			width: 70%;
+		}
+}
+@media screen and (max-width: 1100px){
+	#mn_mv{
+		display: block;
+	}
+	#mnP{
+		background: rgb(255,255,255);
+		height: calc(100% - 180px);
+		left: -100%;
+		overflow: scroll;
+		position: fixed;
+		top: 2em;
+		width: 70%;
+		z-index: 30;
+	}
+		#mnP a{
+			border-right: 0;
+			padding: 0 0.5em;
+			text-align: center;
+		}
+		#mnP ul{
+			display: block;
+			margin-left: 0;
+			margin-top: 1em;
+			width: 100%;
+		}
+			#mnP ul li{
+				border-bottom:1px solid #5B3A11;
+				display: block;
+				padding: 0.5em 0;
+				text-align: left;
+			}
+				#mnP ul li ul{
+					width: 100%;
+					position: relative;
+					z-index: 1;
+				}
+				#mnP ul li:hover ul{
+					display: none;
+				}
+				#mnP ul li .submen{
+					cursor: pointer;
+					margin-top: -1em;
+					position: absolute;
+					right: 2em;
+					transform: scale(1.5) rotate(180deg);
+				}
+				#mnP ul li .submen:hover,#mnP ul li .submen:active{
+					transform: scale(2) rotate(180deg);
+				}
+}
+@media screen and (max-width: 700px){
+		footer .foorflx{
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+			footer .foorflx .ar{
+				margin: 1em auto;
+				width: 90%;
+			}
+		header #logo{
+			width: 30%;
+		}
+		#hdos{
+			font-size: 25px;
+		}
+}
+@media screen and (max-width: 500px){
+		header #usuario{
+			order:2;
+		}
+		header #logo{
+			order: 1;
+			width: 50%;
+		}
+	#mn_mv{
+		order:3;
+	}
+}
