@@ -60,10 +60,14 @@ footer{
 				text-decoration: underline;
 			}
 header{
+	background:#fff;
 	display: flex;
 	-webkit-justify-content: space-around;
 	-ms-justify-content: space-around;
 	justify-content: space-around;
+	width: 100%;
+	top: 0;
+	z-index: 50;
 }
 	header #logo{
 		width: 18%;
